@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #688fb0;  /* Darker version of #9ab8d4 */
+    background-color: #688fb0;
     padding: 20px;
     box-sizing: border-box;
     width: 100%;
@@ -21,6 +21,7 @@ body {
 
 #navbar h1 {
     margin: 0;
+    font-family: 'Averia Serif Libre', serif;
 }
 
 #navbar a {
