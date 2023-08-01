@@ -1,20 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #A2D2FF;
-    color: #ffffff;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 #navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: #688fb0;  /* Darker version of #9ab8d4 */
     padding: 20px;
     box-sizing: border-box;
     width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
 #navbar h1 {
@@ -22,16 +24,20 @@ body {
 }
 
 #navbar a {
-    color: #ffffff;
+    color: #FFFFFF;
     text-decoration: none;
+    background-color: #9ab8d4;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    flex: 1;
+    height: calc(100vh - 60px);
+    padding-top: 60px;
+    box-sizing: border-box;
 }
 
 #login {
@@ -45,35 +51,29 @@ body {
 }
 
 #blog {
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     box-sizing: border-box;
-    flex: 1;
-    overflow: auto;
+    margin-top: 100px;
 }
 
 .blog-post {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #9ab8d4; 
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
 }
 
 #photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     padding: 20px;
-    box-sizing: border-box;
-    flex: 1;
-    overflow: auto;
+    margin-top: 60px;
 }
 
 #photos img {
     width: 100%;
-    max-width: 600px;
-    margin-bottom: 20px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
-#photos div {
-    width: 100%;
-    padding-bottom: 66.66%; /* Aspect ratio 3:2 */
-    position: relative;
-}
-
-
