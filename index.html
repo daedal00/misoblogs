@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>Miso Blogs</title>
+</head>
+<body>
+    <div id="login">
+        <input type="password" id="password" placeholder="Enter Password" />
+        <button onclick="login()">Submit</button>
+    </div>
+    <div id="blog" style="display: none;">
+        <h1>Miso Blogs</h1>
+        <div class="blog-post">
+            <h2>July 31, 2023</h2>
+            <p>This is my blog post for today.</p>
+        </div>
+        <div class="blog-post">
+            <h2>July 30, 2023</h2>
+            <p>This is my blog post for yesterday.</p>
+        </div>
+        <!-- Add more blog posts here -->
+    </div>
+
+    <script>
+    function login() {
+        var password = document.getElementById("password").value;
+        if(password == "ilovemiso") {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("blog").style.display = "block";
+        } else {
+            alert("Incorrect password.");
+        }
+    }
+    </script>
+</body>
+</html>
