@@ -7,12 +7,15 @@
     <title>Miso Blogs</title>
 </head>
 <body>
-    <div id="login">
+    <div id="navbar" style="display: none;">
+        <h1>Miso Blogs</h1>
+        <a href="photos.html">Photos</a>
+    </div>
+    <div id="login" class="center">
         <input type="password" id="password" placeholder="Enter Password" />
         <button onclick="login()">Submit</button>
     </div>
     <div id="blog" style="display: none;">
-        <h1>Miso Blogs</h1>
         <div class="blog-post">
             <h2>July 31, 2023</h2>
             <p>This is my blog post for today.</p>
@@ -25,15 +28,26 @@
     </div>
 
     <script>
-    function login() {
-        var password = document.getElementById("password").value;
-        if(password == "ilovemiso") {
+        function login() {
+            var password = document.getElementById("password").value;
+            if(password == "haeun") {
+                sessionStorage.setItem('isLoggedIn', 'true');
+                document.getElementById("login").style.display = "none";
+                document.getElementById("navbar").style.display = "flex";
+                document.getElementById("blog").style.display = "block";
+            } else {
+                alert("Incorrect password.");
+            }
+        }
+    
+        // Check if user is already logged in
+        if(sessionStorage.getItem('isLoggedIn') === 'true') {
             document.getElementById("login").style.display = "none";
+            document.getElementById("navbar").style.display = "flex";
             document.getElementById("blog").style.display = "block";
         } else {
-            alert("Incorrect password.");
+            document.getElementById("login").style.display = "flex";
         }
-    }
     </script>
 </body>
 </html>
