@@ -1,13 +1,20 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #40E0D0;
+    background-color: #A2D2FF;
     color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #navbar {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 #navbar h1 {
@@ -19,9 +26,16 @@ body {
     text-decoration: none;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex: 1;
+}
+
 #login {
     text-align: center;
-    margin-top: 20%;
 }
 
 #password {
@@ -31,7 +45,10 @@ body {
 }
 
 #blog {
-    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+    overflow: auto;
 }
 
 .blog-post {
@@ -42,19 +59,14 @@ body {
 }
 
 #photos {
-    margin: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+    overflow: auto;
 }
 
 #photos img {
     width: 100%;
     max-width: 600px;
     margin-bottom: 20px;
-}
-
-#login {
-    display: none;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
