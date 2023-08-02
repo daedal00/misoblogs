@@ -78,3 +78,14 @@ body {
     object-fit: cover;
     border-radius: 10px;
 }
+
+#pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pagination a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #9ab8d4;
+}
