@@ -89,3 +89,54 @@ body {
     text-decoration: none;
     color: #9ab8d4;
 }
+
+.collapsible-post, .collapsible-post summary {
+    border: none;  
+    outline: none; 
+    padding: 0;
+    margin: 0;
+    background-color: #9ab8d4; 
+}
+
+.collapsible-post summary::-webkit-details-marker { 
+    display: none; 
+}
+
+.collapsible-post summary {
+    display: block;
+    color: #FFFFFF;
+    padding: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none; 
+    font-size: 1.5em;
+    font-family: Arial, sans-serif; 
+    background-color: #9ab8d4; 
+    border-radius: 10px 10px 0 0; 
+}
+
+.collapsible-post .blog-content {
+    display: none;
+    padding: 10px 20px 20px 20px;
+    background-color: #9ab8d4;
+}
+
+
+.collapsible-post[open] .blog-content {
+    display: block;
+}
+
+.collapsible-post[open] summary::before {
+    content: '▼ ';
+}
+.collapsible-post:not([open]) summary::before {
+    content: '► ';
+}
+
+
+.collapsible-post {
+    background-color: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
