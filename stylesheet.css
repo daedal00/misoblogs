@@ -64,6 +64,11 @@ body {
     border-radius: 10px;
 }
 
+.blog-post p {
+    line-height: 1.5;
+}
+
+
 #photos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -77,6 +82,10 @@ body {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.pagination {
+    margin-bottom: 30px; 
 }
 
 #pagination {
